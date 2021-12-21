@@ -1,5 +1,3 @@
-
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,13 +22,13 @@ public class CEZ {
     @Test
     public void spiny() {
         driver.get(BASE_URL);
-        new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hdoForm\"]/div/div[1]/div[1]/div/div[2]/b")));
+        new WebDriverWait(driver,15).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hdoForm\"]/div/div[1]/div[1]/div/div[2]/b")));
         driver.findElement(By.xpath("//*[@id=\"hdoForm\"]/div/div[1]/div[1]/div/div[2]/b")).click();
 
         driver.findElement(By.xpath("//*[@id=\"hdoForm\"]/div/div[1]/div[1]/div/div[3]/div/ul/li[3]")).click();
 
         driver.findElement(By.xpath("//*[@id=\"code\"]")).sendKeys("A1B6DP1");
-        new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"code\"]")));
+        new WebDriverWait(driver,20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"code\"]")));
         driver.findElement(By.xpath("//*[@id=\"hdoForm\"]/div/div[2]/button")).click();
 
     }
